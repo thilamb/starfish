@@ -1,0 +1,74 @@
+Steps to set up our website
+
+** View: display nodes related to someones's account
+Header: View Area
+Filter Criteria: Published AND Type Ad
+Format: Grid
+Show: Content
+Contextual Filters: (User posted or commented)
+- Provide default value: User ID from logged in user
+
+
+** View: Profile Header
+format: html list
+show: fields
+Fields: Fisrt name, last name, etc...
+Filter criterai: Profile: type (= User profile)
+
+** View: Reply PM to Ad
+Format: unformatted list
+Show: fields
+Fields: User: name
+Fields: PrivateMsg Send PrivateMsgLink 
+
+** View: Rules scheduler
+Format: Table
+Fields: Rules scheduler: Tid
+Fields: Rules scheduler: Component name
+Fields: Rules scheduler: Scheduled date
+Fields: Rules scheduler: User provided identifier
+Fields: Global: Custom text
+Filter Criterai: Rules scheduler: component name
+Sort Criteria: Rules scheduler schedule date
+
+** Rules: unpublish after date
+- Events:
+  After saving new content of type Ad
+  After updating existing content of type Ad
+- Conditions:
+  None
+- Actions:
+  Schedule component evaluation
+
+
+** Rules: Redirect Providers to Provider Profile page after login"
+- Events:
+  After saving a new profile
+- Conditions:
+  User has role(s): provider
+- Actions:
+  Page redirect: 
+  
+** Inactive Rules: Schedule Node unpublishing
+- Events:
+  After saving a new profile
+- Conditions:
+  User has role(s): provider
+- Actions:
+  Page redirect: 
+  
+
+
+** Content Types
+- Ad
+  -- Title
+  -- Body
+  -- Location
+  -- Date
+  -- Entity Reference
+- Basic page
+- Experience
+  -- Tags
+  -- Image
+  -- Body
+  -- Location (GeoLocation)
