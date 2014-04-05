@@ -57,6 +57,13 @@ Sort Criteria: Rules scheduler schedule date
 - Actions:
   Page redirect: 
   
+** Rules Component (rule set): Unpublish content rule
+- Value: Entity: node
+- Conditions - Elements: 
+  Content is published
+  && Content is of type Ad
+- Actions - elements: Unpublish Content (content: node)
+
 
 
 ** Content Types
