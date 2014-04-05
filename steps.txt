@@ -1,5 +1,11 @@
 Steps to set up our website
 
+** View: Frontpage
+- Add Filter Criteria
+  Geolocation: Distance
+  Expose this filter to visitors
+=> to get Ads only in a radius around a certain location
+
 ** View: display nodes related to someones's account
 Header: View Area
 Filter Criteria: Published AND Type Ad
